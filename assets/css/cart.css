@@ -1,0 +1,44 @@
+.options-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.options-container {
+  display: flex;
+  width: 600px;
+}
+
+.delete-carrito {
+  align-self: left;
+}
+
+.button-delete {
+  display: block;
+  float: left;
+  width: 100px;
+}
+
+.button-carrito {
+  width: 70px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.total-carrito {
+  align-self: right;
+}
+
+.invoice-link{
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 575px) and (max-width: 1490px) {
+  .options-container {
+    display: flex;
+    width: 600px;
+    margin-bottom: 700px;
+  }
+}

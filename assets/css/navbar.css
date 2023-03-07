@@ -1,0 +1,292 @@
+.user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  width: 300px;
+}
+
+.user-in {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 400px;
+}
+
+.user-name {
+  margin-top: 15px;
+  width: 120px;
+  overflow: hidden;
+}
+
+.navigation {
+  width: 100%;
+  background-color: #fff;
+  height: 100px;
+}
+
+.menu-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-panel {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+}
+
+.user-panel ul {
+  padding: 0;
+  margin-top: 17px;
+}
+
+.cart-menu-check {
+  position: absolute;
+  top: 0;
+  z-index: -999;
+}
+
+.cart-icon {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 120px;
+  height: 50px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.cart-icon svg{
+  width: 35px;
+  width: 35px;
+}
+
+.cart-menu-check:checked + .cart-menu {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 300px;
+  top: 100px;
+  right: 230px;
+  background-color: #fff;
+}
+
+.cart-menu {
+  display: none;
+  flex-direction: column;
+  flex-flow: column;
+  background-color: #fff;
+}
+
+.admin-menu-check {
+  position: absolute;
+  top: 0;
+  z-index: -999;
+}
+
+.admin-menu-check:checked + .admin-menu {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 300px;
+  background-color: #fff;
+}
+
+.setting-icon {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 5px;
+  width: 120px;
+  height: 50px;
+  text-align: center;
+}
+
+.admin-menu {
+  display: none;
+  flex-direction: column;
+  flex-flow: column;
+  background-color: #fff;
+}
+
+#cart-button {
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.menu-left {
+  width: 50%;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.categories {
+  width: 100%;
+  height: 35px;
+}
+
+.categories-buttom:hover {
+  border-bottom: solid var(--third-color) 4px;
+}
+
+.categories-menu-check {
+  position: absolute;
+  z-index: -999;
+  top: 0;
+}
+
+@media screen and (min-width: 575px) and (max-width: 1490px) { 
+  .navigation {
+    width: 100%;
+    height: 80px;
+  }
+
+  .logo{
+    display: none
+  }
+
+  .categories {
+    display: none;
+  }
+
+  .hamburger-menu {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .menu-left label{
+    height: 2vh;
+    width: 2vh;
+  }
+
+  .categories-menu-check {
+    position: absolute;
+    z-index: -999;
+    top: 0;
+  }
+
+  .categories-menu-check:checked + .categories {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 400px;
+    background-color: #fff;
+    top: 70px;
+    left: 0;
+  }
+
+  .categories-buttom{
+    font-size: 1.5vh;
+  }
+
+  .menu-icon {
+    position: fixed;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2vh;
+    height: 2vh;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  .menu-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+
+  .menu-icon span:first-child {
+    transform-origin: top;
+  }
+
+  .menu-icon span:last-child {
+    transform-origin: bottom;
+  }
+
+  .menu-icon:hover span {
+    background-color: #777;
+  }
+
+  .menu-icon.active span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .menu-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.active span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .cart-icon{
+    background-color: #fff;
+  }
+
+  .cart-icon h4{
+    display: none;
+  }
+
+  .cart-icon svg{
+    display: none;
+  }
+
+  .admin-menu-check:checked + .admin-menu {
+    position: absolute;
+    z-index: 1;
+    width: 20vh;
+    height: 8vh;
+    right: 3px;
+    top:89px
+  }
+
+  .admin-menu ul {
+    font-size: 1.5vh;
+  }
+
+  .user-name{
+    font-size: 30px;
+    width: 100px;
+  }
+
+  .user-in .user-panel ul li{
+    font-size: 23px;
+    margin-top: 5px;
+  }
+}
